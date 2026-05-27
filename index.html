@@ -189,6 +189,165 @@ src="https://www.facebook.com/tr?id=26432065306489112&ev=PageView&noscript=1"
 
   .hero-price-note strong { color: var(--gold-light); }
 
+  .hero-benefits {
+    max-width: 700px;
+    margin: 0 auto 32px;
+    text-align: left;
+    animation: fadeUp 0.7s 0.25s ease both;
+  }
+
+  .hero-benefits-title {
+    color: rgba(255,255,255,0.92);
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .hero-benefits-list {
+    list-style: none;
+    display: grid;
+    gap: 11px;
+    color: rgba(255,255,255,0.88);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .hero-benefits-list li span {
+    margin-top: 2px;
+    color: var(--gold-light);
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+
+  .hero-mini-testimonials {
+    margin: 24px auto 0;
+    display: grid;
+    gap: 14px;
+    max-width: 740px;
+    animation: fadeUp 0.7s 0.35s ease both;
+  }
+
+  .hero-mini-testimonial {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 14px;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 18px;
+    padding: 20px 22px;
+  }
+
+  .hero-mini-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255,255,255,0.12);
+    flex-shrink: 0;
+  }
+
+  .hero-mini-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-mini-testimonial p {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .hero-mini-testimonial .author {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .hero-mini-testimonial .author {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .hero-mini-stars {
+    color: var(--gold-light);
+    font-size: 0.95rem;
+    margin-top: 2px;
+  }
+
+  .hero-trust {
+    margin-top: 24px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: 12px;
+    text-align: left;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 22px 24px;
+    animation: fadeUp 0.7s 0.45s ease both;
+  }
+
+  .hero-trust-main {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .hero-trust-main strong {
+    color: var(--gold-light);
+  }
+
+  .hero-trust-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .hero-trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: rgba(255,255,255,0.92);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero-trust-item span {
+    color: var(--gold-light);
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
+  .hero-urgency {
+    color: rgba(255,200,0,0.88);
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 700px) {
+    .hero-benefits,
+    .hero-trust,
+    .hero-mini-testimonials { max-width: 100%; }
+    .hero-mini-testimonial { grid-template-columns: 1fr; }
+  }
+
   /* countdown */
   .countdown-wrap {
     margin-top: 48px;
@@ -474,6 +633,15 @@ src="https://www.facebook.com/tr?id=26432065306489112&ev=PageView&noscript=1"
     font-weight: 700;
     font-size: 1rem;
     flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .testi-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
   }
 
   .testi-name { font-weight: 600; font-size: 0.9rem; }
@@ -735,8 +903,8 @@ src="https://www.facebook.com/tr?id=26432065306489112&ev=PageView&noscript=1"
   </div>
 
   <h1>
-    Como Faturar R$1.000<br>
-    <em>Montando Cestas no Dia dos Namorados</em>
+    Aprenda a montar e vender cestas de Dia dos Namorados<br>
+    <em>e fature R$1.000 mesmo sem experiência</em>
   </h1>
 
   <p class="hero-sub">
@@ -744,17 +912,49 @@ src="https://www.facebook.com/tr?id=26432065306489112&ev=PageView&noscript=1"
     Aprenda a montar, empacotar e vender pelo WhatsApp, Instagram e Facebook.
   </p>
 
+  <div class="hero-benefits">
+    <div class="hero-benefits-title">Você vai receber acesso imediato a:</div>
+    <ul class="hero-benefits-list">
+      <li><span>✅</span> Aula completa mostrando como montar cestas passo a passo</li>
+      <li><span>✅</span> Lista de materiais e fornecedores</li>
+      <li><span>✅</span> Estratégia para precificar e lucrar</li>
+      <li><span>✅</span> Método para vender pelo WhatsApp e Instagram</li>
+      <li><span>✅</span> Modelos prontos para divulgação</li>
+    </ul>
+  </div>
+
   <a href="https://pay.hotmart.com/H105854858K?checkoutMode=10&hotfeature=51" class="cta-btn">
-    Quero aprender agora <span class="arrow">→</span>
+    Quero acesso imediato por R$47 <span class="arrow">→</span>
   </a>
 
-  <p class="hero-price-note">
-    <span style="text-decoration:line-through;opacity:0.5;font-size:0.8rem;">R$97,00</span>
-    &nbsp;→&nbsp; Por apenas <strong>R$47,00</strong> · Acesso imediato · Garantia de 7 dias
-  </p>
-  <p style="margin-top:8px;font-size:0.78rem;color:rgba(255,200,0,0.85);animation:fadeUp 0.7s 0.45s ease both;">
-    ⚠️ Preço promocional por tempo limitado — pode subir a qualquer momento
-  </p>
+  <div class="hero-mini-testimonials">
+    <div class="hero-mini-testimonial">
+      <div class="hero-mini-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Juliana" /></div>
+      <div>
+        <div class="hero-mini-stars">★★★★★</div>
+        <p>Fiz R$420 na primeira semana seguindo o passo a passo. Simples demais!</p>
+        <div class="author"><strong>Juliana M.</strong> · São Paulo, SP</div>
+      </div>
+    </div>
+    <div class="hero-mini-testimonial">
+      <div class="hero-mini-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Carla" /></div>
+      <div>
+        <div class="hero-mini-stars">★★★★★</div>
+        <p>Comprei perto do Dia das Mães e vendi 6 cestas. Já paguei o guia 150 vezes.</p>
+        <div class="author"><strong>Carla S.</strong> · Belo Horizonte, MG</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-trust">
+    <p class="hero-trust-main">Acesso imediato por apenas <strong>R$47</strong></p>
+    <div class="hero-trust-list">
+      <div class="hero-trust-item"><span>✔</span> Compra segura pela Hotmart</div>
+      <div class="hero-trust-item"><span>✔</span> Garantia de 7 dias</div>
+      <div class="hero-trust-item"><span>✔</span> Liberação imediata após o pagamento</div>
+    </div>
+    <p class="hero-urgency">⚠ Preço promocional por tempo limitado. Pode subir a qualquer momento.</p>
+  </div>
 
   <div class="countdown-wrap">
     <p class="countdown-label">Tempo até o Dia dos Namorados</p>
@@ -888,34 +1088,34 @@ src="https://www.facebook.com/tr?id=26432065306489112&ev=PageView&noscript=1"
     <div class="testi-grid">
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">Nunca tinha vendido nada na vida. Fiz R$420 na primeira semana seguindo o passo a passo. Simples demais!</p>
-        <div class="testi-author">
-          <div class="testi-avatar">J</div>
-          <div>
-            <div class="testi-name">Juliana M.</div>
-            <div class="testi-city">São Paulo, SP</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">Comprei na semana antes do Dia das Mães e consegui vender 6 cestas. Já paguei o guia umas 150 vezes.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">C</div>
-          <div>
-            <div class="testi-name">Carla S.</div>
-            <div class="testi-city">Belo Horizonte, MG</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
         <p class="testi-text">O que mais gostei foi a parte de onde comprar barato. Reduzi meu custo pela metade e o lucro dobrou.</p>
         <div class="testi-author">
-          <div class="testi-avatar">R</div>
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Renata" /></div>
           <div>
-            <div class="testi-name">Rodrigo T.</div>
+            <div class="testi-name">Renata T.</div>
             <div class="testi-city">Curitiba, PR</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">Vendi 8 cestas no primeiro fim de semana. O passo a passo saiu do papel e já deu retorno rápido.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Marina" /></div>
+          <div>
+            <div class="testi-name">Marina P.</div>
+            <div class="testi-city">Fortaleza, CE</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">Aprendi a negociar pelo WhatsApp e fechei mais pedidos em apenas 3 dias. O conteúdo é direto e fácil de aplicar.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=120&q=80" alt="Larissa" /></div>
+          <div>
+            <div class="testi-name">Larissa A.</div>
+            <div class="testi-city">Recife, PE</div>
           </div>
         </div>
       </div>
